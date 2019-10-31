@@ -6,7 +6,7 @@
 #include <Magnum/Math/Color.h>
 #include <Magnum/Platform/Sdl2Application.h>
 
-using namespace Magnum;
+namespace Magnum {
 
 class MyApplication : public Platform::Application {
 public:
@@ -30,9 +30,9 @@ MyApplication::MyApplication(const Arguments &arguments)
 void MyApplication::drawEvent() {
   GL::defaultFramebuffer.clear(GL::FramebufferClear::Color);
 
-  // TODO: Add your drawing code here
-
   swapBuffers();
 }
 
-MAGNUM_APPLICATION_MAIN(MyApplication);
+} // namespace Magnum
+
+// MAGNUM_APPLICATION_MAIN(Magnum::MyApplication);
